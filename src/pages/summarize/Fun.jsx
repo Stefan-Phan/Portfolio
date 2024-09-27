@@ -1,7 +1,7 @@
 export default function Fun() {
   return (
     <div>
-      <h1>This is Fun page</h1>
+      <h1>Stefan is working on this page</h1>
     </div>
   );
 }
