@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+:root {
+  --grey-line: #d3d3d3;
+  --grey-color: #a0a5ac;
+}
+
+.sidebar {
+  height: 100vh;
+  border-right: 1px solid var(--grey-line);
+  color: black;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+}
+
+.routes {
+  color: white;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 0;
+  margin-top: 15px;
+}
+
+.link {
+  display: flex;
+  color: black;
+  gap: 10px;
+  padding: 5px 15px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.link:hover {
+  border-right: 4px solid black;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  background: #f3f3f3;
+}
+
+.bars {
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+}
+
+main {
+  font-size: 25px;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.link-text {
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.routes a,
+.contact a {
+  text-decoration: none;
+}
+
+.routes .link {
+  border: none;
+}
+
+.hl {
+  margin-top: 30px;
+  border-top: 1px solid var(--grey-line);
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.hl2 {
+  margin-top: 30px;
+  border-top: 1px solid var(--grey-line);
+  width: 55px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  padding: 10px 15px;
+  color: var(--grey-color);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.contact-container .contact {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 55px;
+}

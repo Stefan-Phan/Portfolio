@@ -1,0 +1,11 @@
+.typewrite {
+  color: var(--grey-color);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+/* Ensure to style the wrap as necessary */
+.typewrite > .wrap {
+  border-right: 0.08em solid #fff; /* This creates the cursor effect */
+}

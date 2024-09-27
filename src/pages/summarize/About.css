@@ -1,0 +1,143 @@
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 15px 15px;
+  margin: 0 auto;
+}
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.information p {
+  font-size: 15px;
+  text-align: left;
+}
+
+.introduction {
+  margin-right: 50px;
+  max-width: 700px;
+}
+
+.title {
+  color: var(--grey-color);
+  letter-spacing: 0.15em;
+  font-size: 15px;
+  text-align: left;
+}
+
+.stefan-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.large-line {
+  border-top: 1px solid var(--grey-line);
+  width: 1700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .stefan-image img {
+    margin-top: 20px;
+    width: 200px;
+    margin-bottom: 30px;
+  }
+
+  .introduction {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grow img {
+    margin-top: 50px;
+  }
+}
+
+.about-section h1 {
+  color: var(--grey-color);
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+}
+
+.about-section h4 {
+  letter-spacing: 0.15em;
+}
+
+.university-section .uni-name {
+  letter-spacing: 0.25em;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+.university-section .degree {
+  color: var(--grey-color);
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+}
+
+.campus-image img {
+  width: 500px;
+  border-radius: 3px;
+}
+
+.grow img {
+  height: 300px;
+  width: 150px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  transition: transform 1s ease, z-index 0.5s ease;
+  border: none;
+}
+
+.grow img:hover {
+  transform: scale(1.5);
+  z-index: 1000;
+}
+
+.grow {
+  position: relative;
+  transition: transform 1s ease, z-index 0.5s ease;
+}
+
+.grow-1 {
+  left: 10px;
+  top: -20px;
+  z-index: 2;
+}
+
+.grow-3 {
+  left: -10px;
+  top: -20px;
+}
