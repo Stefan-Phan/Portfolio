@@ -6,6 +6,9 @@ import AiDetector5 from "../../assets/img/ai-detector-5.png";
 import "./AIDetector.css";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { fadeIn } from "../../variants";
+import { motion } from "framer-motion";
+
 const slideImages = [
   {
     src: AiDetector1,
@@ -32,7 +35,13 @@ const slideImages = [
 export default function AIDetector() {
   return (
     <div className="container text-center ai-detector">
-      <div className="slide-container">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="slide-container"
+      >
         <Slide autoplay={false}>
           {slideImages.map((slideImage, index) => (
             <div key={index}>
@@ -40,9 +49,23 @@ export default function AIDetector() {
             </div>
           ))}
         </Slide>
-      </div>
-      <div className="title-and-download">
-        <div className="project-title">AI DETECTOR</div>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="title-and-download"
+      >
+        <div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+          className="project-title"
+        >
+          AI DETECTOR
+        </div>
         <div className="download-button">
           <a
             href="folders/AI Detector Report.zip"
@@ -61,12 +84,26 @@ export default function AIDetector() {
             </button>
           </a>
         </div>
-      </div>
-      <div className="project-purpose">Safeguarding Academic Integrity</div>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="project-purpose"
+      >
+        Safeguarding Academic Integrity
+      </motion.div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <div className="project-desc">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="project-desc"
+      >
         <p>
           In the AI Detector project, I was responsible for developing a
           user-centered solution to address the misuse of generative AI in an
@@ -77,11 +114,17 @@ export default function AIDetector() {
           tool, ensuring it integrated seamlessly with the UniSA online
           framework while adhering to ethical guidelines and enhancing learning.
         </p>
-      </div>
+      </motion.div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <div className="row project-credit d-flex justify-content-center">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="row project-credit d-flex justify-content-center"
+      >
         <div className="col-12 col-sm-3">
           <h3>Timeline</h3>
           <p>Apr - Jun 2024</p>
@@ -104,7 +147,7 @@ export default function AIDetector() {
             <li>Human Interface</li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

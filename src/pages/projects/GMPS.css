@@ -42,8 +42,6 @@ button {
 }
 
 .card:hover {
-  transform: scale(1.15);
-  z-index: 15;
   transition: 0.5s;
   background: rgb(222, 222, 222);
 }

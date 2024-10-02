@@ -6,25 +6,46 @@ import campusCityWest from "../../assets/img/campus_cityw.jpg";
 import basketball1 from "../../assets/img/basketball_1.png";
 import basketball2 from "../../assets/img/basketball_4.png";
 import basketball3 from "../../assets/img/basketball_3.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 export default function About() {
   return (
     <div className="container text-center about-section">
-      <h1>NGUYEN TUAN HUNG PHAN</h1>
-      <h4>STEFAN</h4>
-      <Typewriter
-        toRotate={["Full Stack Developer", "Software Engineering"]}
-        period={3000}
-      />
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+      >
+        <h1>NGUYEN TUAN HUNG PHAN</h1>
+        <h4>STEFAN</h4>
+        <Typewriter
+          toRotate={["Full Stack Developer", "Software Engineering"]}
+          period={3000}
+        />
+      </motion.div>
       <div className="row information">
-        <div className="col-12 col-lg-5 d-flex align-self-center justify-content-center stefan-image">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+          className="col-12 col-lg-5 d-flex align-self-center justify-content-center stefan-image"
+        >
           <img
             src={myself_2}
             className="img-fluid"
             alt="Stefan image at Adelaide, South Australia"
           />
-        </div>
-        <div className="col-12 col-lg-7">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.1 }}
+          className="col-12 col-lg-7"
+        >
           <p className="title">INFO</p>
           <p className="introduction">
             I’m a student living in Adelaide, Australia. From a young age, I’ve
@@ -54,12 +75,18 @@ export default function About() {
             to continue my journey in the tech world, eager to see how I can
             contribute to shaping the future through the power of code.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <div className="row information">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="row information"
+      >
         <div className="col-12 col-lg-5">
           <p className="title">EDUCATION</p>
           <div className="university-section">
@@ -80,11 +107,17 @@ export default function About() {
             alt="City Campus UNISA"
           />
         </div>
-      </div>
+      </motion.div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <div className="row information">
+      <motion.div
+        className="row information"
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+      >
         <div className="col-12 col-lg-5 d-flex flex-column justify-content-center">
           <p className="title">THINGS I LOVE TO DO</p>
           <p className="align-self-center">
@@ -103,7 +136,7 @@ export default function About() {
             <img src={basketball3} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

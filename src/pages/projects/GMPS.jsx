@@ -6,6 +6,8 @@ import Requirement from "../../assets/img/requirementicon.png";
 import ActivityModeling from "../../assets/img/activitymodelingicon.png";
 import UseCase from "../../assets/img/usecaseicon.png";
 import BackEndImage from "../../assets/img/backendimage.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 import Card from "react-bootstrap/Card";
 import "./GMPS.css";
@@ -69,13 +71,25 @@ export default function GMPS() {
   return (
     <div className="container text-center gmps">
       <div className="description">
-        <h1>General Medical Practice System (GMPS)</h1>
-        <h4>System Requirements Analyst & Backend Developer</h4>
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+        >
+          <h1>General Medical Practice System (GMPS)</h1>
+          <h4>System Requirements Analyst & Backend Developer</h4>
+        </motion.div>
         <div className="d-flex justify-content-center">
           <div className="large-line "></div>
         </div>
 
-        <p>
+        <motion.p
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+        >
           The General Medical Practice System (GMPS) is a comprehensive solution
           designed to streamline the management of medical practices. The
           project encompasses both the detailed analysis of system requirements
@@ -84,12 +98,19 @@ export default function GMPS() {
           Developer, I played a pivotal role in both defining the functional
           aspects of the system and implementing them using a modern technology
           stack.
-        </p>
+        </motion.p>
       </div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <h3>System Requirements Analyst</h3>
+      <motion.h3
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+      >
+        System Requirements Analyst
+      </motion.h3>
       <div className="card-container container justify-content-center">
         <div className="row">
           {cardsData.map(({ id, image, title, hoverText }) => (
@@ -121,15 +142,26 @@ export default function GMPS() {
         <div className="large-line "></div>
       </div>
       <div className="backend-dev">
-        <h3>
+        <motion.h3
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 1 }}
+        >
           BACK<span>END</span> DEVELOPMENT
-        </h3>
+        </motion.h3>
         <img src={BackEndImage} className="img-fluid" />
       </div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <div className="row project-credit d-flex justify-content-center">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 1 }}
+        className="row project-credit d-flex justify-content-center"
+      >
         <div className="col-12 col-sm-3">
           <h3>Timeline</h3>
           <p>Jun - Sep 2024</p>
@@ -155,7 +187,7 @@ export default function GMPS() {
             <li>using ReactJS</li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
