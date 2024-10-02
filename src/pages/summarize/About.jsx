@@ -16,21 +16,21 @@ export default function About() {
         variants={fadeIn("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <h1>NGUYEN TUAN HUNG PHAN</h1>
         <h4>STEFAN</h4>
         <Typewriter
-          toRotate={["Full Stack Developer", "Software Engineering"]}
+          toRotate={["Back End Developer", "Software Engineering"]}
           period={3000}
         />
       </motion.div>
-      <div className="row information">
+      <div className="row information mt-5">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 1 }}
+          viewport={{ once: true, amount: 1 }}
           className="col-12 col-lg-5 d-flex align-self-center justify-content-center stefan-image"
         >
           <img
@@ -43,7 +43,7 @@ export default function About() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="col-12 col-lg-7"
         >
           <p className="title">INFO</p>
@@ -80,52 +80,94 @@ export default function About() {
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <motion.div
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="row information"
-      >
+      <div className="row information">
         <div className="col-12 col-lg-5">
-          <p className="title">EDUCATION</p>
+          <motion.p
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="title"
+          >
+            EDUCATION
+          </motion.p>
           <div className="university-section">
-            <p className="uni-name">UNIVERSY OF SOUTH AUSTRALIA</p>
-            <p className="degree">Bachelor of Software Engineering</p>
-            <p>
+            <motion.p
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.7 }}
+              className="uni-name"
+            >
+              UNIVERSY OF SOUTH AUSTRALIA
+            </motion.p>
+            <motion.p
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.7 }}
+              className="degree"
+            >
+              Bachelor of Software Engineering
+            </motion.p>
+            <motion.p
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.7 }}
+            >
               Studying Software Engineer at the University of South Australia
               was challenging at first, especially being abroad, but the
               rewarding hands-on experience and global perspective made it all
               worthwhile.
-            </p>
+            </motion.p>
           </div>
         </div>
-        <div className="col-12 col-lg-5 d-flex align-self-center justify-content-center campus-image">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+          className="col-12 col-lg-5 d-flex align-self-center justify-content-center campus-image"
+        >
           <img
             src={campusCityWest}
             className="img-fluid"
             alt="City Campus UNISA"
           />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <motion.div
-        className="row information"
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
-      >
-        <div className="col-12 col-lg-5 d-flex flex-column justify-content-center">
-          <p className="title">THINGS I LOVE TO DO</p>
-          <p className="align-self-center">
+      <div className="row information">
+        <div className="col-12 col-lg-5 d-flex flex-column justify-content-center mb-4">
+          <motion.p
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="title"
+          >
+            THINGS I LOVE TO DO
+          </motion.p>
+          <motion.p
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             I love playing basketball, whether it's competing in a game or just
             shooting hoops with friends for fun.
-          </p>
+          </motion.p>
         </div>
-        <div className="col-12 col-lg-5 d-flex align-self-center justify-content-center">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+          className="col-12 col-lg-5 d-flex align-self-center justify-content-center basketball-images"
+        >
           <div className="grow grow-1">
             <img src={basketball1} />
           </div>
@@ -135,8 +177,8 @@ export default function About() {
           <div className="grow grow-3">
             <img src={basketball3} />
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

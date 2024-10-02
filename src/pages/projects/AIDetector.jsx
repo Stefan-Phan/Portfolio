@@ -4,10 +4,10 @@ import AiDetector3 from "../../assets/img/ai-detector-4.png";
 import AiDetector4 from "../../assets/img/ai-detector-3.png";
 import AiDetector5 from "../../assets/img/ai-detector-5.png";
 import "./AIDetector.css";
-import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const slideImages = [
   {
@@ -33,39 +33,48 @@ const slideImages = [
 ];
 
 export default function AIDetector() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const changeSlide = (direction) => {
+    const newIndex =
+      (currentIndex + direction + slideImages.length) % slideImages.length;
+    setCurrentIndex(newIndex);
+  };
   return (
     <div className="container text-center ai-detector">
-      <motion.div
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
-        className="slide-container"
-      >
-        <Slide autoplay={false}>
-          {slideImages.map((slideImage, index) => (
-            <div key={index}>
-              <img src={slideImage.src} alt="" />
-            </div>
-          ))}
-        </Slide>
-      </motion.div>
+      <div className="slide-container">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.4 }}
+          className="slider"
+        >
+          <div
+            className="slides"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {slideImages.map((slideImage, index) => (
+              <div key={index} className="slide">
+                <img src={slideImage.src} alt={slideImage.caption} />
+              </div>
+            ))}
+          </div>
+          <button className="prev" onClick={() => changeSlide(-1)}>
+            &#10094;
+          </button>
+          <button className="next" onClick={() => changeSlide(1)}>
+            &#10095;
+          </button>
+        </motion.div>
+      </div>
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="title-and-download"
       >
-        <div
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 1 }}
-          className="project-title"
-        >
-          AI DETECTOR
-        </div>
+        <div className="project-title">AI DETECTOR</div>
         <div className="download-button">
           <a
             href="folders/AI Detector Report.zip"
@@ -89,7 +98,7 @@ export default function AIDetector() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
+        viewport={{ once: true, amount: 0.7 }}
         className="project-purpose"
       >
         Safeguarding Academic Integrity
@@ -97,14 +106,13 @@ export default function AIDetector() {
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
-      <motion.div
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
-        className="project-desc"
-      >
-        <p>
+      <div className="project-desc">
+        <motion.p
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.4 }}
+        >
           In the AI Detector project, I was responsible for developing a
           user-centered solution to address the misuse of generative AI in an
           educational setting. My role involved applying design thinking
@@ -113,8 +121,8 @@ export default function AIDetector() {
           contributed to ideating, prototyping, and testing the final AI-powered
           tool, ensuring it integrated seamlessly with the UniSA online
           framework while adhering to ethical guidelines and enhancing learning.
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
       <div className="d-flex justify-content-center">
         <div className="large-line "></div>
       </div>
@@ -122,25 +130,25 @@ export default function AIDetector() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 1 }}
+        viewport={{ once: true, amount: 1 }}
         className="row project-credit d-flex justify-content-center"
       >
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Timeline</h3>
           <p>Apr - Jun 2024</p>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Tools</h3>
           <ul>
             <li>Figma</li>
             <li>Word</li>
           </ul>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Team</h3>
           <p>Stefan Phan</p>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Disciplines</h3>
           <ul>
             <li>Design Thinking</li>
