@@ -30,7 +30,7 @@ export default function About() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
           className="col-12 col-lg-5 d-flex align-self-center justify-content-center stefan-image"
         >
           <img

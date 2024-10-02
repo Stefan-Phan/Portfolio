@@ -155,7 +155,7 @@ button {
   }
 
   .about-section h1 {
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0.1em;
   }
 
@@ -163,29 +163,16 @@ button {
     margin-bottom: 15px;
   }
 
-  .container h1 {
-    font-size: 30px;
-  }
-
   .container h4 {
     font-size: 15px;
   }
 
-  .container .typewriter-text {
-    font-size: 20px;
+  .typewriter-text span {
+    font-size: 4px;
   }
 
   p {
     font-size: 14px;
-  }
-
-  .sidebar {
-    width: 50px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
   }
 
   .sidebar .icon {
