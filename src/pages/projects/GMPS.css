@@ -52,3 +52,31 @@ button {
 .gmps .description h1 {
   font-size: 50px;
 }
+
+@media (max-width: 768px) {
+  .gmps .card-container {
+    max-width: 600px;
+  }
+
+  .gmps .card-container .card {
+    height: 150px;
+    width: 120px;
+  }
+
+  .gmps .card-container .card .card-title {
+    font-size: 8px;
+  }
+
+  .gmps .description h1 {
+    font-size: 30px;
+  }
+
+  .gmps .description p {
+    max-width: 430px;
+    font-size: 15px;
+  }
+
+  .backend-dev img {
+    width: 400px;
+  }
+}

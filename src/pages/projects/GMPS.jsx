@@ -58,15 +58,22 @@ export default function GMPS() {
   return (
     <div className="container text-center gmps">
       <div className="description">
-        <motion.div
+        <motion.h1
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
         >
-          <h1>General Medical Practice System (GMPS)</h1>
-          <h4>System Requirements Analyst & Backend Developer</h4>
-        </motion.div>
+          General Medical Practice System (GMPS)
+        </motion.h1>
+        <motion.h4
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          System Requirements Analyst & Backend Developer
+        </motion.h4>
         <div className="d-flex justify-content-center">
           <div className="large-line "></div>
         </div>
@@ -75,7 +82,7 @@ export default function GMPS() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
         >
           The General Medical Practice System (GMPS) is a comprehensive solution
           designed to streamline the management of medical practices. The
@@ -101,8 +108,14 @@ export default function GMPS() {
       <div className="card-container container justify-content-center">
         <div className="row g-3">
           {cardsData.map((card) => (
-            <div className="col-12 col-md-6 col-lg-4" key={card.id}>
-              <div className="card">
+            <div className="col-4" key={card.id}>
+              <motion.div
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.6 }}
+                className="card"
+              >
                 <img
                   className="custom-card-img"
                   src={hoveredCard === card.id ? null : card.image}
@@ -113,7 +126,7 @@ export default function GMPS() {
                     <strong>{card.title}</strong>
                   </h4>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
@@ -126,7 +139,7 @@ export default function GMPS() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
         >
           BACK<span>END</span> DEVELOPMENT
         </motion.h3>
@@ -149,11 +162,11 @@ export default function GMPS() {
         viewport={{ once: true, amount: 1 }}
         className="row project-credit d-flex justify-content-center"
       >
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Timeline</h3>
           <p>Jun - Sep 2024</p>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Tools</h3>
           <ul>
             <li>Word</li>
@@ -163,11 +176,11 @@ export default function GMPS() {
             <li>Postman</li>
           </ul>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Team</h3>
           <p>Stefan Phan</p>
         </div>
-        <div className="col-12 col-sm-3">
+        <div className="col-3">
           <h3>Disciplines</h3>
           <ul>
             <li>Implement front-end</li>
