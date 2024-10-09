@@ -4,7 +4,6 @@ import AiDetector3 from "../../assets/img/ai-detector-4.png";
 import AiDetector4 from "../../assets/img/ai-detector-3.png";
 import AiDetector5 from "../../assets/img/ai-detector-5.png";
 import "./AIDetector.css";
-import "react-slideshow-image/dist/styles.css";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -46,7 +45,7 @@ export default function AIDetector() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="slider"
         >
           <div
@@ -71,7 +70,7 @@ export default function AIDetector() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.7 }}
         className="title-and-download"
       >
         <div className="project-title">AI DETECTOR</div>
@@ -111,7 +110,7 @@ export default function AIDetector() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.7 }}
         >
           In the AI Detector project, I was responsible for developing a
           user-centered solution to address the misuse of generative AI in an
@@ -130,7 +129,7 @@ export default function AIDetector() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.7 }}
         className="row project-credit d-flex justify-content-center"
       >
         <div className="col-3">

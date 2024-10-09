@@ -1,5 +1,3 @@
-import ActivityModeling from "../../assets/img/activitymodelingicon.png";
-
 export default function GameHub() {
   return (
     <div>

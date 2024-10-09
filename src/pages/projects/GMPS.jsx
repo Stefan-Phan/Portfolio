@@ -1,4 +1,3 @@
-import { useState } from "react"; // Import useState
 import Stakeholder from "../../assets/img/stakeholdericon.png";
 import UserStories from "../../assets/img/userstoryicon.png";
 import Interview from "../../assets/img/interviewicon.png";
@@ -12,16 +11,6 @@ import { fadeIn } from "../../variants";
 import "./GMPS.css";
 
 export default function GMPS() {
-  const [hoveredCard, setHoveredCard] = useState(null);
-
-  const handleMouseEnter = (cardId) => {
-    setHoveredCard(cardId);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredCard(null);
-  };
-
   const cardsData = [
     {
       id: 1,
@@ -113,12 +102,12 @@ export default function GMPS() {
                 variants={fadeIn("right", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: true, amount: 0.6 }}
+                viewport={{ once: true, amount: 0.7 }}
                 className="card"
               >
                 <img
                   className="custom-card-img"
-                  src={hoveredCard === card.id ? null : card.image}
+                  src={card.image}
                   alt={card.title}
                 />
                 <div className="card-body">
@@ -147,7 +136,7 @@ export default function GMPS() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
         >
           <img src={BackEndImage} className="img-fluid" />
         </motion.div>
@@ -159,7 +148,7 @@ export default function GMPS() {
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
         className="row project-credit d-flex justify-content-center"
       >
         <div className="col-3">

@@ -60,11 +60,11 @@ button {
 
   .gmps .card-container .card {
     height: 150px;
-    width: 120px;
+    width: 110px;
   }
 
   .gmps .card-container .card .card-title {
-    font-size: 8px;
+    font-size: 6px;
   }
 
   .gmps .description h1 {

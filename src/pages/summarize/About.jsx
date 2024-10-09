@@ -16,7 +16,7 @@ export default function About() {
         variants={fadeIn("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.7 }}
       >
         <h1>NGUYEN TUAN HUNG PHAN</h1>
         <h4>STEFAN</h4>
@@ -30,7 +30,7 @@ export default function About() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="col-12 col-lg-5 d-flex align-self-center justify-content-center stefan-image"
         >
           <img
@@ -43,7 +43,7 @@ export default function About() {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.7 }}
           className="col-12 col-lg-7"
         >
           <p className="title">INFO</p>
